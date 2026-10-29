@@ -1,0 +1,1445 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="theme-color" content="#101c19">
+
+  <meta name="description"
+    content="Canyon Trail Tennis provides youth tennis instruction, match-play training, and USTA Junior Team Tennis opportunities in the East Bay, California.">
+
+  <title>Canyon Trail Tennis | Train. Compete. Belong.</title>
+
+  <style>
+
+    /* ====================================
+       GENERAL STYLES
+    ==================================== */
+
+    :root {
+      --ink: #15221e;
+      --muted: #63716a;
+      --forest: #183d31;
+      --lime: #d5ed77;
+      --cream: #f6f7f1;
+      --line: #dce3d9;
+      --white: #ffffff;
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #fff;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    h1, h2, h3, p {
+      margin-top: 0;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.13;
+      letter-spacing: -0.045em;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.17em;
+      font-size: 0.77rem;
+      font-weight: 800;
+      color: #6b7972;
+      margin-bottom: 18px;
+    }
+
+    .section {
+      padding: 94px 0;
+    }
+
+    .section-head {
+      max-width: 700px;
+      margin-bottom: 36px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(2rem, 4vw, 3.45rem);
+      margin-bottom: 16px;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+
+    /* ====================================
+       NAVIGATION
+    ==================================== */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255,255,255,0.96);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(16px);
+    }
+
+    .nav {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      font-size: 1.03rem;
+    }
+
+    .brand-symbol {
+      background: var(--forest);
+      color: var(--lime);
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 11px;
+      font-size: 1rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-size: 0.89rem;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: #467c56;
+    }
+
+    .nav-cta {
+      background: var(--forest);
+      color: white !important;
+      padding: 11px 18px;
+      border-radius: 100px;
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 1px solid var(--line);
+      background: white;
+      border-radius: 10px;
+      padding: 10px 13px;
+      cursor: pointer;
+      color: var(--ink);
+    }
+
+
+    /* ====================================
+       HERO SECTION
+    ==================================== */
+
+    .hero {
+      overflow: hidden;
+      background: var(--cream);
+      padding: 95px 0 105px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.04fr 0.96fr;
+      align-items: center;
+      gap: 55px;
+    }
+
+    .hero h1 {
+      font-size: clamp(3.55rem, 7vw, 6.2rem);
+      line-height: 1.02;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: #568b55;
+    }
+
+    .hero .intro {
+      color: #506159;
+      font-size: 1.16rem;
+      max-width: 520px;
+      margin-bottom: 30px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 22px;
+      font-size: 0.94rem;
+      font-weight: 750;
+      border-radius: 100px;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--forest);
+      color: white;
+    }
+
+    .btn-secondary {
+      border: 1px solid #b7c4b8;
+      background: white;
+      color: var(--forest);
+    }
+
+    .small-note {
+      font-size: 0.79rem;
+      color: #7b8880;
+      margin-top: 22px;
+    }
+
+
+    /* ====================================
+       TENNIS COURT HERO GRAPHIC
+    ==================================== */
+
+    .hero-art {
+      min-height: 425px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 26px;
+      background: #163e32;
+      box-shadow: 0 22px 55px rgba(13,45,31,0.12);
+    }
+
+    .court {
+      position: absolute;
+      inset: 40px 40px 38px;
+      border: 2px solid rgba(238,247,217,0.75);
+    }
+
+    .court::before,
+    .court::after {
+      content: "";
+      position: absolute;
+      border: 2px solid rgba(238,247,217,0.73);
+    }
+
+    .court::before {
+      inset: 0 24%;
+    }
+
+    .court::after {
+      top: 50%;
+      left: 0;
+      right: 0;
+      border-width: 1px 0 0;
+    }
+
+    .centerline {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      border-left: 2px solid rgba(238,247,217,0.65);
+    }
+
+    .tennis-ball {
+      position: absolute;
+      width: 104px;
+      height: 104px;
+      right: 11%;
+      top: 17%;
+      border-radius: 50%;
+      background: var(--lime);
+      box-shadow: 0 16px 55px rgba(0,0,0,0.18);
+      transform: rotate(-27deg);
+      overflow: hidden;
+    }
+
+    .tennis-ball::before,
+    .tennis-ball::after {
+      content: "";
+      position: absolute;
+      top: -15%;
+      width: 75%;
+      height: 130%;
+      border: 3px solid white;
+      border-radius: 50%;
+    }
+
+    .tennis-ball::before {
+      left: -60%;
+    }
+
+    .tennis-ball::after {
+      right: -60%;
+    }
+
+    .art-tag {
+      position: absolute;
+      left: 26px;
+      bottom: 26px;
+      background: rgba(255,255,255,0.95);
+      padding: 14px 17px;
+      border-radius: 13px;
+      max-width: 235px;
+    }
+
+    .art-tag strong {
+      display: block;
+      font-size: 0.9rem;
+    }
+
+    .art-tag span {
+      font-size: 0.78rem;
+      color: #67746b;
+    }
+
+    .art-corner {
+      position: absolute;
+      left: 26px;
+      top: 22px;
+      color: #e9f3dd;
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      font-weight: 800;
+    }
+
+
+    /* ====================================
+       QUICK STATS
+    ==================================== */
+
+    .stats {
+      background: var(--forest);
+      color: white;
+      padding: 23px 0;
+    }
+
+    .stat-row {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .stat-row span {
+      font-size: 0.81rem;
+      letter-spacing: 0.02em;
+      color: #e3ecdf;
+    }
+
+    .stat-row strong {
+      color: var(--lime);
+    }
+
+
+    /* ====================================
+       PROGRAM CARDS
+    ==================================== */
+
+    .program-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .program-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 30px;
+      min-height: 260px;
+      display: flex;
+      flex-direction: column;
+      background: white;
+    }
+
+    .program-card .number {
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: #649668;
+      letter-spacing: 0.1em;
+    }
+
+    .program-card h3 {
+      font-size: 1.5rem;
+      margin: 25px 0 12px;
+    }
+
+    .program-card p {
+      font-size: 0.96rem;
+      color: var(--muted);
+      margin-bottom: 15px;
+    }
+
+    .program-card .tag {
+      margin-top: auto;
+      align-self: flex-start;
+      color: var(--forest);
+      font-size: 0.78rem;
+      font-weight: 800;
+      border-top: 1px solid var(--line);
+      padding-top: 14px;
+      width: 100%;
+    }
+
+
+    /* ====================================
+       TRAINING SECTIONS
+    ==================================== */
+
+    .light {
+      background: var(--cream);
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .split h2 {
+      font-size: clamp(2rem, 4vw, 3.3rem);
+    }
+
+    .split p {
+      color: var(--muted);
+    }
+
+    .quote {
+      border-left: 4px solid #9cbf6a;
+      padding: 18px 0 18px 25px;
+      font-size: 1.3rem;
+      font-weight: 700;
+      line-height: 1.45;
+      margin: 28px 0;
+    }
+
+    .details {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 29px;
+    }
+
+    .detail-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 20px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .detail-row:first-child {
+      padding-top: 0;
+    }
+
+    .detail-row:last-child {
+      border: 0;
+      padding-bottom: 0;
+    }
+
+    .detail-row span {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .detail-row strong {
+      text-align: right;
+      font-size: 0.96rem;
+    }
+
+    .fineprint {
+      font-size: 0.81rem;
+      color: #6a786f;
+      margin-top: 18px;
+    }
+
+
+    /* ====================================
+       TEAM PROGRAMS
+    ==================================== */
+
+    .path-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .path {
+      padding: 28px 24px;
+      border-left: 2px solid #aaca73;
+      background: #f9faf5;
+    }
+
+    .path span {
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      color: #648264;
+    }
+
+    .path h3 {
+      font-size: 1.35rem;
+      margin: 14px 0;
+    }
+
+    .path p {
+      font-size: 0.94rem;
+      color: var(--muted);
+      margin: 0;
+    }
+
+
+    /* ====================================
+       CONTACT
+    ==================================== */
+
+    .contact {
+      background: #112e24;
+      color: white;
+    }
+
+    .contact .eyebrow {
+      color: #c5dfa9;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .contact h2 {
+      font-size: clamp(2.35rem, 5vw, 4.1rem);
+      margin-bottom: 18px;
+    }
+
+    .contact p {
+      color: #d0ded3;
+      max-width: 550px;
+    }
+
+    .contact-card {
+      padding: 32px;
+      border: 1px solid #49665a;
+      border-radius: 18px;
+    }
+
+    .contact-card h3 {
+      font-size: 1.35rem;
+    }
+
+    .contact-card p {
+      font-size: 0.92rem;
+    }
+
+    .contact-card .btn {
+      background: var(--lime);
+      color: #123123;
+      width: 100%;
+    }
+
+    .contact-card small {
+      display: block;
+      color: #bfcebf;
+      margin-top: 15px;
+    }
+
+
+    /* ====================================
+       FOOTER
+    ==================================== */
+
+    footer {
+      padding: 28px 0;
+      background: #0b221a;
+      color: #c1cec4;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 0.83rem;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+
+    /* ====================================
+       RESPONSIVE TABLET
+    ==================================== */
+
+    @media (max-width: 900px) {
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 73px;
+        left: 0;
+        right: 0;
+        background: white;
+        box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        padding: 17px 5%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 5px;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        display: block;
+        padding: 10px;
+      }
+
+      .hero-grid,
+      .split,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-art {
+        min-height: 360px;
+      }
+
+      .hero {
+        padding: 75px 0;
+      }
+
+      .program-grid,
+      .path-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stat-row {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+
+
+    /* ====================================
+       RESPONSIVE MOBILE
+    ==================================== */
+
+    @media (max-width: 620px) {
+
+      .section {
+        padding: 67px 0;
+      }
+
+      .hero h1 {
+        font-size: clamp(3rem, 13vw, 4.5rem);
+      }
+
+      .hero-art {
+        min-height: 320px;
+      }
+
+      .court {
+        inset: 35px 35px;
+      }
+
+      .program-grid,
+      .path-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .split {
+        gap: 28px;
+      }
+
+      .detail-row {
+        align-items: flex-start;
+      }
+
+      .stat-row {
+        gap: 14px;
+      }
+
+      .stat-row span {
+        width: 100%;
+      }
+
+      .contact-grid {
+        gap: 20px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .btn {
+        transition: none;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ====================================
+       NAVIGATION
+  ==================================== -->
+
+  <header class="site-header">
+
+    <div class="container nav">
+
+      <a class="brand" href="#home"
+        aria-label="Canyon Trail Tennis home">
+
+        <span class="brand-symbol">CT</span>
+
+        <span>Canyon Trail Tennis</span>
+
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="site-links">
+
+        Menu ☰
+
+      </button>
+
+      <ul class="nav-links" id="site-links">
+
+        <li>
+          <a href="#programs">Programs</a>
+        </li>
+
+        <li>
+          <a href="#training">Training</a>
+        </li>
+
+        <li>
+          <a href="#teams">Teams</a>
+        </li>
+
+        <li>
+          <a href="#about">Our approach</a>
+        </li>
+
+        <li>
+          <a href="#contact" class="nav-cta">
+            Get in touch
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- ====================================
+         HERO
+    ==================================== -->
+
+    <section class="hero" id="home">
+
+      <div class="container hero-grid">
+
+        <div>
+
+          <p class="eyebrow">
+            East Bay, California · Youth &amp; Adult Tennis
+          </p>
+
+          <h1>
+            Train.<br>
+            Compete.<br>
+            <em>Belong.</em>
+          </h1>
+
+          <p class="intro">
+            Tennis is more than a game. At Canyon Trail Tennis,
+            we build skills, confidence, connections, and
+            opportunities to compete—one player at a time.
+          </p>
+
+          <div class="actions">
+
+            <a class="btn btn-primary" href="#programs">
+              Explore programs ↗
+            </a>
+
+            <a class="btn btn-secondary" href="#contact">
+              Ask about joining
+            </a>
+
+          </div>
+
+          <p class="small-note">
+            Based around Canyon Trail Park in El Cerrito
+            and the greater East Bay.
+          </p>
+
+        </div>
+
+
+        <!-- CUSTOM TENNIS COURT GRAPHIC -->
+
+        <div class="hero-art"
+          role="img"
+          aria-label="Stylized green tennis court with a tennis ball">
+
+          <span class="art-corner">
+            CANYON TRAIL / TENNIS
+          </span>
+
+          <div class="court">
+            <div class="centerline"></div>
+          </div>
+
+          <div class="tennis-ball"></div>
+
+          <div class="art-tag">
+
+            <strong>
+              Practice with purpose.
+            </strong>
+
+            <span>
+              Play with confidence.
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================
+         QUICK PROGRAM HIGHLIGHTS
+    ==================================== -->
+
+    <div class="stats">
+
+      <div class="container stat-row">
+
+        <span>
+          <strong>Junior Team Tennis</strong>
+          · Team-based competition
+        </span>
+
+        <span>
+          <strong>Match play</strong>
+          · Skills under pressure
+        </span>
+
+        <span>
+          <strong>Community</strong>
+          · Growth at every level
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <!-- ====================================
+         PROGRAMS
+    ==================================== -->
+
+    <section class="section" id="programs">
+
+      <div class="container">
+
+        <div class="section-head">
+
+          <p class="eyebrow">
+            Find your place on court
+          </p>
+
+          <h2>
+            Programs that grow with the player.
+          </h2>
+
+          <p>
+            From the first rally to league competition,
+            our approach combines fundamentals,
+            purposeful practice, and real match experience.
+          </p>
+
+        </div>
+
+
+        <div class="program-grid">
+
+          <!-- JUNIOR TRAINING -->
+
+          <article class="program-card">
+
+            <span class="number">
+              01 / YOUTH
+            </span>
+
+            <h3>
+              Junior training
+            </h3>
+
+            <p>
+              Small-group instruction and match-play
+              sessions that develop consistency,
+              movement, decision-making, and confidence.
+            </p>
+
+            <span class="tag">
+              Gold · Silver · Copper training groups
+            </span>
+
+          </article>
+
+
+          <!-- USTA JTT -->
+
+          <article class="program-card">
+
+            <span class="number">
+              02 / TEAMS
+            </span>
+
+            <h3>
+              USTA Junior Team Tennis
+            </h3>
+
+            <p>
+              Team competition where young players learn
+              how to represent one another, handle pressure,
+              and grow through match experience.
+            </p>
+
+            <span class="tag">
+              10U Orange · 10U Green · 12U Yellow
+            </span>
+
+          </article>
+
+
+          <!-- ADULT PROGRAMMING -->
+
+          <article class="program-card">
+
+            <span class="number">
+              03 / GROWING
+            </span>
+
+            <h3>
+              Adult tennis
+            </h3>
+
+            <p>
+              Interest-based plans for adult league teams,
+              group practices, and recreational or
+              competitive tennis opportunities.
+            </p>
+
+            <span class="tag">
+              Adult teams &amp; clinics · In development
+            </span>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================
+         TRAINING
+    ==================================== -->
+
+    <section class="section light" id="training">
+
+      <div class="container split">
+
+        <div>
+
+          <p class="eyebrow">
+            On-court training
+          </p>
+
+          <h2>
+            Skills are built in practice.
+            Confidence is built in play.
+          </h2>
+
+          <p>
+            Our training emphasizes movement, rally skills,
+            technique, and decision-making through engaging
+            drills and point play.
+
+            Players are challenged at a level that supports
+            their development.
+          </p>
+
+          <p>
+            Competitive growth matters, but so do
+            sportsmanship, friendships, enjoyment,
+            and the confidence to keep improving.
+          </p>
+
+          <div class="quote">
+            Development first.
+            Competitive opportunities for every stage.
+          </div>
+
+        </div>
+
+
+        <!-- SCHEDULE CARD -->
+
+        <div class="details">
+
+          <p class="eyebrow">
+            Fall 2026 Saturday training
+          </p>
+
+          <div class="detail-row">
+
+            <span>Location</span>
+
+            <strong>
+              Canyon Trail Park<br>
+              El Cerrito, CA
+            </strong>
+
+          </div>
+
+          <div class="detail-row">
+
+            <span>Gold group</span>
+
+            <strong>
+              3:30–4:30 PM
+            </strong>
+
+          </div>
+
+          <div class="detail-row">
+
+            <span>Silver &amp; Copper groups</span>
+
+            <strong>
+              4:30–5:30 PM
+            </strong>
+
+          </div>
+
+          <div class="detail-row">
+
+            <span>Session fee</span>
+
+            <strong>
+              $25 per player
+            </strong>
+
+          </div>
+
+          <p class="fineprint">
+            Schedule shown is for Fall 2026.
+            Contact us to confirm upcoming session dates,
+            eligibility, availability, and pricing
+            before attending.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================
+         USTA TEAM TENNIS
+    ==================================== -->
+
+    <section class="section" id="teams">
+
+      <div class="container">
+
+        <div class="section-head">
+
+          <p class="eyebrow">
+            Competitive pathways
+          </p>
+
+          <h2>
+            Better together.
+          </h2>
+
+          <p>
+            Teams help players turn individual progress
+            into shared experience—with accountability,
+            encouragement, and the excitement of
+            competing for something together.
+          </p>
+
+        </div>
+
+
+        <div class="path-grid">
+
+          <div class="path">
+
+            <span>JUNIOR</span>
+
+            <h3>
+              10U Orange Ball
+            </h3>
+
+            <p>
+              Age-appropriate competition with a focus
+              on developing match skills and confidence.
+            </p>
+
+          </div>
+
+
+          <div class="path">
+
+            <span>JUNIOR</span>
+
+            <h3>
+              10U Green Ball
+            </h3>
+
+            <p>
+              Team play for developing competitors
+              ready to build tactical and match experience.
+            </p>
+
+          </div>
+
+
+          <div class="path">
+
+            <span>JUNIOR</span>
+
+            <h3>
+              12U Yellow Ball
+            </h3>
+
+            <p>
+              Continued development and team competition
+              as players transition to the full court.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <p class="fineprint">
+          These divisions reflect Fall 2026 team programming.
+          Future offerings depend on registration,
+          player eligibility, and league schedules.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================
+         ABOUT / PHILOSOPHY
+    ==================================== -->
+
+    <section class="section light" id="about">
+
+      <div class="container split">
+
+        <div>
+
+          <p class="eyebrow">
+            Our philosophy
+          </p>
+
+          <h2>
+            Good tennis.
+            Stronger people.
+            Lasting community.
+          </h2>
+
+          <p>
+            Canyon Trail Tennis is led by a coach
+            with experience across youth sports,
+            school athletics, and community college tennis.
+
+            We believe strong programs combine thoughtful
+            instruction with meaningful opportunities
+            to participate and compete.
+          </p>
+
+          <p>
+            Whether a player is learning to rally or
+            preparing for a competitive match,
+            our goal is to help them feel challenged,
+            supported, and connected to a team.
+          </p>
+
+        </div>
+
+
+        <div class="details">
+
+          <p class="eyebrow">
+            What matters here
+          </p>
+
+          <div class="detail-row">
+            <span>01</span>
+            <strong>Progress over perfection</strong>
+          </div>
+
+          <div class="detail-row">
+            <span>02</span>
+            <strong>Sportsmanship and respect</strong>
+          </div>
+
+          <div class="detail-row">
+            <span>03</span>
+            <strong>Intentional match experience</strong>
+          </div>
+
+          <div class="detail-row">
+            <span>04</span>
+            <strong>Community and belonging</strong>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================
+         CONTACT
+    ==================================== -->
+
+    <section class="section contact" id="contact">
+
+      <div class="container contact-grid">
+
+        <div>
+
+          <p class="eyebrow">
+            Join the community
+          </p>
+
+          <h2>
+            Your next chapter
+            starts on court.
+          </h2>
+
+          <p>
+            Interested in junior training,
+            USTA Junior Team Tennis, or future adult
+            tennis opportunities?
+
+            Send a message with the player's age,
+            experience, and program of interest.
+          </p>
+
+        </div>
+
+
+        <div class="contact-card">
+
+          <h3>
+            Let's talk tennis.
+          </h3>
+
+          <p>
+            Ask about upcoming sessions, team
+            opportunities, group placement,
+            and availability.
+          </p>
+
+          <!-- CHANGE EMAIL ADDRESS IF NEEDED -->
+
+          <a
+            class="btn"
+            href="mailto:coachjaymot@gmail.com?subject=Canyon%20Trail%20Tennis%20Inquiry">
+
+            Email Canyon Trail Tennis ↗
+
+          </a>
+
+          <small>
+            Training schedule and enrollment
+            are subject to confirmation.
+          </small>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ====================================
+       FOOTER
+  ==================================== -->
+
+  <footer>
+
+    <div class="container footer-row">
+
+      <span>
+        © <span id="year">2026</span>
+        Canyon Trail Tennis
+      </span>
+
+      <span>
+        East Bay, California · Train. Compete. Belong.
+      </span>
+
+      <a href="#home">
+        Back to top ↑
+      </a>
+
+    </div>
+
+  </footer>
+
+
+  <!-- ====================================
+       JAVASCRIPT
+  ==================================== -->
+
+  <script>
+
+    const toggle = document.querySelector('.menu-toggle');
+
+    const links = document.querySelector('.nav-links');
+
+    toggle.addEventListener('click', () => {
+
+      const open = links.classList.toggle('open');
+
+      toggle.setAttribute(
+        'aria-expanded',
+        String(open)
+      );
+
+      toggle.setAttribute(
+        'aria-label',
+        open ? 'Close navigation' : 'Open navigation'
+      );
+
+    });
+
+
+    links.querySelectorAll('a').forEach(link => {
+
+      link.addEventListener('click', () => {
+
+        links.classList.remove('open');
+
+        toggle.setAttribute(
+          'aria-expanded',
+          'false'
+        );
+
+        toggle.setAttribute(
+          'aria-label',
+          'Open navigation'
+        );
+
+      });
+
+    });
+
+
+    document.getElementById('year').textContent =
+      new Date().getFullYear();
+
+  </script>
+
+</body>
+</html>
